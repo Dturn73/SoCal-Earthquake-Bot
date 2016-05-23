@@ -26,4 +26,4 @@ var postMostRecentEarthQuake = function(currentEarthQuake){
 	document.getElementById('update').innerHTML = 'Last updated at ' + new Date($.now()).toLocaleString();
 }
 getData();
-setTimeout(getData, 30000);
+setInterval(getData, 30000);
