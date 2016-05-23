@@ -14,6 +14,7 @@ var getData = function(){
 			var featuresArr = earthquakes.features;
 			//console.log(featuresArr);
 			var currentEarthQuake = featuresArr[0];
+			console.log(featuresArr);
 			postMostRecentEarthQuake(currentEarthQuake);
 	});
 }
@@ -22,10 +23,7 @@ var postMostRecentEarthQuake = function(currentEarthQuake){
 	$("#most-recent-earthquake").empty();
 	document.getElementById('most-recent-earthquake').innerHTML = '<p>'+'A ' + currentEarthQuake.properties.mag + ' magnitude earthquake occured' + 
 	'<br>' + currentEarthQuake.properties.place + '<br>' + 'on ' + new Date (currentEarthQuake.properties.time).toLocaleString() +'</p>';
-
 	document.getElementById('update').innerHTML = 'Last updated at ' + new Date($.now()).toLocaleString();
 }
-
-
 getData();
-setInterval(getData, 10000);
+setTimeout(getData, 30000);
