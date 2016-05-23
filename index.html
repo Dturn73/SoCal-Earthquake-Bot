@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -10,6 +9,7 @@
 				width: 300px;
 				background-color: #7FFFD4;
 				border-radius: 20px; 
+				border-color: #008000;
 			}
 			p { padding-top: 100px;
 				padding-left: 20px;
@@ -18,18 +18,26 @@
 			h2{
 				padding-left: 60px;
 
-				width: 700px;
-				background-color: #7FFFD4; 
+				width: 700px; 
 			}
 			h4 {
 				padding-left: 20px;
 			}
+
+			#map {
+				height: 75%;
+				margin: 0;
+				padding: 0;
+			}
 		</style>
 	</head>
 	<body>
-		<h2>Last Earthquake</h2>
-		<div id='most-recent-earthquake'></div>
+		<div>
+			<h2>Last Earthquake</h2>
 		<h4 id='update'></h4>
+		</div>
+		<div id='most-recent-earthquake'></div>
+		<div id='map'></div>
 		<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
 		<script type="text/javascript" src="js/custom.js"></script>
 	</body>
